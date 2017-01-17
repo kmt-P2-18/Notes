@@ -28,6 +28,7 @@ class Menu {
 
   void draw() {
     imageMode(CORNER);
+    strokeCap(SQUARE);
     current = approach(center, current);
     float def = current%350;
     float origin = 600 - current;

@@ -3,10 +3,9 @@
 // 1-4-54 Shunsuke Mano
 
 /*
-譜面や、動画、歌詞などのデータを持つクラスです。
+ 譜面や、動画、歌詞などのデータを持つクラスです。
  コンストラクタに楽曲名を渡すと、 data/(楽曲名) 以下に置かれているファイルからインスタンスを作成します。
  */
-
 
 import processing.video.*;
 import ddf.minim.*;
@@ -54,29 +53,22 @@ class Music {
       groups[i] = new Group(_jsonarray.getJSONObject(i));
     }
     for (Group g : groups) {
-      for (Note n : g.notes) {
-        notes.add(n);
-      }
+      for (Note n : g.notes) notes.add(n);
     }
-    // audio  = new Audio (dirName + "/audio.mp3");
     lyrics = new Lyrics(dirName + "/lyrics.txt");
     movie  =  loadMovie(dirName + "/movie.mov");
     java.util.Collections.sort(this.notes, new NoteComparator());
-    // this.audio.player.play();
     this.movie.loop();
   }
 
   void draw(int _currentTime) {
-
+    imageMode(CENTER);
+    strokeCap(SQUARE);
     background(128);
     tint(255, 255);
     image(movie, width/2, height/2, 1072, 600);
-    for (int i = 0; i < this.notes.size(); i++) {
-      this.notes.get(i).draw(_currentTime);
-    }
-    for (int i = 0; i < this.effects.size(); i++) {
-      this.effects.get(i).draw(_currentTime);
-    }
+    for (Note   note   : this.notes)   note.draw(_currentTime);
+    for (Effect effect : this.effects) effect.draw(_currentTime);
     tint(255, 255);
     image(back, width/2, height/2);
     textSize(18);
@@ -88,9 +80,8 @@ class Music {
     text(name, 43, 22);
     text(lyrics.word(_currentTime), 151, 562);
     _timeDet_ =  _currentTime - int(this.movie.duration()) * 20;
-
     if (_timeDet_ < 0) return;
-    if (_timeDet_ > 20) this.finished = true;  
+    if (_timeDet_ > 20) this.finished = true;
     movie.stop();
   }
 
@@ -104,7 +95,7 @@ class Music {
     for (i = 0; i < min(2, this.notes.size()); i++) {
       if (_currentTime - notes.get(i).route.timing <= -4) return;
       _timeDet_ = _currentTime - notes.get(i).route.timing - notes.get(i).duration;
-      if (_timeDet_ >= 3) {
+      if (_timeDet_ > 3) {
         this.combo_num = 0;
         effects.add(new Effect(notes.get(i).route.pos, 0, 0, _currentTime));
         results.append(0);

@@ -3,7 +3,7 @@
 // 1-4-54 Shunsuke Mano
 
 /*
-定義したグループ内では、ノーツを１つ前のノーツとの差分で定義しています。(グループ内最初のノーツを除く)
+ 定義したグループ内では、ノーツを１つ前のノーツとの差分で定義しています。(グループ内最初のノーツを除く)
  */
 
 class Det {
@@ -18,17 +18,13 @@ class Det {
   float distance;
   int time;
   int figure;
-  int duration;
+  int duration = 0;
 
   Det(JSONObject _json) {
     distance = _json.getInt("distance");
     time     = _json.getInt("time");
     figure   = _json.getInt("figure");
-    if (_json.isNull("duration")) {
-      duration = 0;
-    } else {
-      duration = _json.getInt("duration");
-    }
+    if (!_json.isNull("duration")) duration = _json.getInt("duration");
   }
 }
 

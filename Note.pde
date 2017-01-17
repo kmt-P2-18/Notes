@@ -3,7 +3,7 @@
 // 1-4-54 Shunsuke Mano
 
 /*
-ノーツの形や、動く軌道などをフィールドに持ちます
+ ノーツの形や、動く軌道などをフィールドに持ちます。
  */
 
 class Note {
@@ -15,13 +15,12 @@ class Note {
    */
 
   int   figure;
-  int   duration;
+  int   duration = 0;
   Route route;
 
   Note(int _figure, Route _route) {
     figure   = _figure;
     route    = _route;
-    duration = 0;
   }
 
   Note(int _figure, Route _route, int _duration) {
@@ -33,11 +32,7 @@ class Note {
   Note(JSONObject _json) { // "Route"オブジェクトを引数に渡す
     figure   = _json.getInt("figure");
     route    = new Route(_json);
-    if (_json.isNull("duration")) {
-      duration = 0;
-    } else {
-      duration = _json.getInt("duration");
-    }
+    if (!_json.isNull("duration")) duration = _json.getInt("duration");
   }
 
   void draw(int _currentTime) {
@@ -59,7 +54,7 @@ class Note {
         strokeWeight(30);
         stroke(LONG_COLOR[figure], 255);
         noFill();
-        arc(this.route.center, _secondPos_, _currentPos_, PVector.sub(this.route.pos, this.route.center).heading(), this.route.direction);
+        vectorArc(this.route.center, _secondPos_, _currentPos_, PVector.sub(this.route.pos, this.route.center).heading(), this.route.direction);
         stroke(-1, -1);
         image(female_long[figure], route.pos.x, route.pos.y);
         tint(255, 255);
@@ -112,7 +107,7 @@ class NoteComparator implements Comparator<Note> {
 
 // 長押しノーツを描画する際に使用した関数
 
-void arc(PVector _center, PVector _pos1, PVector _pos2, float _max_theta, int _direction) {
+void vectorArc(PVector _center, PVector _pos1, PVector _pos2, float _max_theta, int _direction) {
   _begin_    = radResize(PVector.sub(_pos1, _center).heading());
   _middle_   = radResize(_max_theta);
   _terminal_ = radResize(PVector.sub(_pos2, _center).heading());
@@ -120,24 +115,18 @@ void arc(PVector _center, PVector _pos1, PVector _pos2, float _max_theta, int _d
   if (_direction == 1) {
     _theta_  = radResize(  _middle_ - _begin_);
     _theta2_ = radResize(_terminal_ - _begin_);
-    if (_theta_ <= _theta2_) {
-      _end_ = _middle_;
-    } else {
-      _end_ = _terminal_;
-    }
+    if (_theta_ <= _theta2_) _end_ = _middle_;
+    else                     _end_ = _terminal_;
   } else {
     _theta_  = radResize(_begin_ -   _middle_);
     _theta2_ = radResize(_begin_ - _terminal_);
-    if (_theta2_ <= _theta_) {
-      _end_ = _terminal_;
-    } else {
-      _end_ = _middle_;
-    }
+    if (_theta2_ <= _theta_) _end_ = _terminal_;
+    else _end_ = _middle_;
   }
-  arc(_center.x, _center.y, PVector.dist(_center, _pos1)*2, _begin_, _end_, _direction);
+  limitedArc(_center.x, _center.y, PVector.dist(_center, _pos1)*2, _begin_, _end_, _direction);
 }
 
-void arc(float x, float y, float r, float begin, float end, int direction) {
+void limitedArc(float x, float y, float r, float begin, float end, int direction) {
   if (begin == end) return;
   if (direction == 1) {
     if (begin < end) {
@@ -156,6 +145,7 @@ void arc(float x, float y, float r, float begin, float end, int direction) {
   }
 }
 
+// 角度を0〜2πの間に変換します
 float radResize(float _rad) {
   _resized_ = _rad;
   for (; _resized_ <=    0; _resized_ += PI*2) {

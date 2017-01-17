@@ -3,7 +3,7 @@
 // 1-4-54  Shunsuke Mano
 
 /*
-ノーツが消える時のエフェクトを表示するクラスです。
+ ノーツが消える時のエフェクトを表示するクラスです。
  判定によってエフェクトが変化します。
  */
 
@@ -26,9 +26,7 @@ class Effect {
     judge     = _judge;
     startTime = _startTime;
     decision  = JUDGE_RANK[_judge];
-    if (_combo > 1) {
-      decision += " " + _combo;
-    }
+    if (_combo > 1) decision += " " + _combo;
   }
 
   void draw(int _currentTime) {

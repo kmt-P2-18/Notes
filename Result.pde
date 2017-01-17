@@ -43,21 +43,10 @@ class Result {
   }
 
   void display(int time) {
-
+    imageMode(CORNER);
     background(0);
     textAlign(LEFT);
     if (time<0) return;
-
-    if (time == 0) {
-      result_start.rewind();
-      result_start.play();
-    }
-
-    if (time == 10) {
-      result_score.rewind();
-      result_score.play();
-    }
-
     if (time>=10) {
       fill(255);
       textSize(40);
@@ -147,18 +136,16 @@ class Result {
   }
   //〇ボタンを押すとツイートする
   void buttonPressed(int time) {
-      if (buttonPressed[0] != 0){
-        tweetScore();
+    if (buttonPressed[0] == 1) {
+      tweetScore();
+    } else if (button.hex > 0) {
+      if (time < 90) {
+        iStartMillisecond -= 90;
         button.hex = 0;
-    }
-      else if (button.hex > 0){
-        if(time < 90) {
-          iStartMillisecond -= 90;
-          button.hex = 0;
-          return;
-        }
-        this.finished = true;
+        return;
       }
+      this.finished = true;
+    }
   }
   //ツイートする関数
   void tweetScore() {

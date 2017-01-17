@@ -1,9 +1,9 @@
-// Notes.pde
+// project_MIKO.pde
 // メインプログラム
 // 1-4-54 Shunsuke Mano
 
 /*
-settings(),setup(), draw(), serialEvent(Serial),  movieEvent(Movie), keyPressed()等の関数が定義されています。
+ settings(),setup(), draw(), serialEvent(Serial),  movieEvent(Movie), keyPressed()等の関数が定義されています。
  */
 
 void settings() {
@@ -27,8 +27,6 @@ void settings() {
   minim        = new Minim(this);
   menu_enter   = minim.loadFile("sound/menu_enter.wav");
   menu_select  = minim.loadFile("sound/menu_select.wav");
-  result_start = minim.loadFile("sound/result_start.wav");
-  result_score = minim.loadFile("sound/result_score.wav");
   for (i = 0; i < 4; i++) {
     play_tap[i] = minim.loadFile("sound/play_tap.wav");
   }
@@ -46,8 +44,6 @@ void settings() {
 void setup() {
   frameRate(-1);
   textFont(createFont("MS Gothic", 20, true));
-  imageMode(CENTER);
-  strokeCap(SQUARE);
 
   // arduinoとの接続
   for (i = 0; i < 10; i++) {
@@ -65,25 +61,22 @@ void draw() {
   switch(mode) {
   case 0:
     if (menu.playGame) {
-      music = new Music(menu.selectSong());
-      imageMode(CENTER);
-      strokeCap(SQUARE);
-      menu.enter    = false;
-      menu.playGame = false;
-      mode = 1;
+      mode              = 1;
+      music             = new Music(menu.selectSong());
+      menu.enter        = false;
+      menu.playGame     = false;
       iStartMillisecond = millis();
     }
     break;
   case 1:
     if (music.finished) {
-      mode = 2;
-      music.finished = false;
-      imageMode(CORNER);
+      mode               = 2;
+      music.finished     = false;
       int[] countedScore = {0, 0, 0};
       for (i = 0; i < music.results.size(); i++) countedScore[music.results.get(i)]++;
-      result = new Result(music.dir, music.max_combo, countedScore);
-      menu.playGame = false;
-      iStartMillisecond = millis();
+      result             = new Result(music.dir, music.max_combo, countedScore);
+      menu.playGame      = false;
+      iStartMillisecond  = millis();
     }
     break;
   case 2:
@@ -94,40 +87,43 @@ void draw() {
     break;
   }
 
-  button.phex=button.hex;
-  button.hex = _hex;
+  currentTime   = int((millis()-iStartMillisecond)*0.02);
+  button.phex   = button.hex;
+  button.hex    = _hex;
   buttonPressed = button.buttonPressed();
 
   switch(mode) {
   case 0:
-    for (i = 0; i < 4; i++) buttonPressed[i] = (buttonPressed[i] == 2 ? buttonPressed[i]+1 : 0);
+    for (i = 0; i < 4; i++) long_count[i] = (buttonPressed[i] == 2 ? long_count[i]+1 : 0);
     menu.buttonPressed();
     menu.draw();
     break;
   case 1:
-    music.judge(buttonPressed, int((millis()-iStartMillisecond)*0.02));
-    music.draw(int((millis()-iStartMillisecond)*0.02));
+    music.judge(buttonPressed, currentTime);
+    music.draw(currentTime);
     break;
   case 2:
-    result.buttonPressed(int((millis()-iStartMillisecond)*0.02));
-    result.display(int((millis()-iStartMillisecond)*0.02));
+    result.buttonPressed(currentTime);
+    result.display(currentTime);
     break;
   }
 }
 
 void serialEvent(Serial port) {
-  button.phex = button.hex;
-  button.hex  = port.read();
+  currentTime   = int((millis()-iStartMillisecond)*0.02);
+  button.phex   = button.hex;
+  button.hex    = port.read();
   buttonPressed = button.buttonPressed();
+
   switch(mode) {
   case 0:
     menu.buttonPressed();
     break;
   case 1:
-    music.judge(buttonPressed, int((millis()-iStartMillisecond)*0.02));
+    music.judge(buttonPressed, currentTime);
     break;
   case 2:
-    result.buttonPressed(int((millis()-iStartMillisecond)*0.02));
+    result.buttonPressed(currentTime);
     break;
   }
 }
@@ -142,7 +138,7 @@ void keyPressed() {
   if (key == 'B' || key == 'b') _hex += 4;
   if (key == 'N' || key == 'n') _hex += 2;
   if (key == 'M' || key == 'm') _hex += 1;
-  if (mode == 0) menu.keyPressed();
+  if (mode == 0)                menu.keyPressed();
 }
 
 void keyReleased() {
