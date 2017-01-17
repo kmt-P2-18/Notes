@@ -1,0 +1,2720 @@
+{
+ "Groups": [
+    
+{
+ "Route":{
+	"center": {
+
+    	  "x": -150, 
+       
+	  "y": 150         
+    },"pos": {
+         
+          "x": 150, 
+   
+          "y": 150
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 95,
+ 
+          "figure": 0
+  
+    }, 
+        
+    "Notes": [
+        
+        {
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 0, 
+
+          "time": 5
+  
+              }, 
+     
+           {
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 0, 
+
+          "time": 5
+  
+              },
+{
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 0, 
+
+          "time": 4
+  
+              },
+{
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 0, 
+
+          "time": 4  
+              }, 
+{
+    
+          "distance": 50, 
+
+          "figure": 1, 
+
+          "time": 4  
+              },    
+{
+         
+          "distance": 100, 
+      
+          "figure": 0, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 100, 
+
+          "figure": 0, 
+
+          "time": 4  
+              }, 
+{
+    
+          "distance": 100, 
+
+          "figure": 0, 
+
+          "time": 4  
+              },       
+   ]
+    
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1200, 
+       
+	  "y": 250         
+    },"pos": {
+         
+          "x": 900, 
+   
+          "y": 250
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 153,
+ 
+          "figure": 0
+  
+    }, 
+        
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 0, 
+
+          "time": 4
+  
+              }, 
+     
+           {
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 0, 
+
+          "time": 4  
+              },
+{
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 0, 
+
+          "time": 4
+  
+              },
+{
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 80, 
+
+          "figure": 0, 
+
+          "time": 4  
+              }, 
+{
+    
+          "distance": 80, 
+
+          "figure": 0, 
+
+          "time": 5 
+    },
+{
+    
+          "distance": 30, 
+
+          "figure": 3, 
+
+          "time": 2  
+    },
+{
+    
+          "distance": 30, 
+
+          "figure": 0, 
+
+          "time": 2  
+    },
+{
+    
+          "distance": 65, 
+
+          "figure": 3, 
+
+          "time": 3 
+    },
+{
+    
+          "distance": 30, 
+
+          "figure": 0, 
+
+          "time": 2  
+    },
+{
+    
+          "distance": 30, 
+
+          "figure": 3, 
+
+          "time": 2  
+    },
+{
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 4  
+    },
+{
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 3  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -200, 
+       
+	  "y": 350         
+    },"pos": {
+         
+          "x": 100, 
+   
+          "y": 350    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 215,
+ 
+          "figure": 2  
+    }, 
+        
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 4
+  
+              }, 
+     
+           {
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 4  
+              },
+{
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time": 3 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 4
+  
+              },
+{
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 3  
+              }, 
+{
+    
+          "distance": 50, 
+
+          "figure": 1, 
+
+          "time": 4 
+    },
+{
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 3  
+    },
+{
+    
+          "distance": 50, 
+
+          "figure": 1, 
+
+          "time": 4  
+    },
+{
+    
+          "distance": 80, 
+
+          "figure": 2, 
+
+          "time": 3 
+    },
+{
+    
+          "distance": 80, 
+
+          "figure": 2, 
+
+          "time": 4  
+    },
+{
+    
+          "distance": 80, 
+
+          "figure": 2, 
+
+          "time": 3  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1200, 
+       
+	  "y": 450         
+    },"pos": {
+         
+          "x": 900, 
+   
+          "y": 450
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 273,
+ 
+          "figure": 2
+  
+    }, 
+        
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure": 3, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 3  
+              }, 
+     
+           {
+         
+          "distance": 50, 
+      
+          "figure": 3, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 3  
+              },
+{
+         
+          "distance": 50, 
+      
+          "figure": 3, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 50, 
+
+          "figure": 2, 
+
+          "time": 3  
+              },
+{
+         
+          "distance": 50, 
+      
+          "figure": 3, 
+  
+          "time": 4 
+               }, 
+   
+        {
+    
+          "distance": 80, 
+
+          "figure": 0, 
+
+          "time": 4  
+              }, 
+{
+    
+          "distance": 35, 
+
+          "figure": 1, 
+
+          "time": 2 
+    },
+{
+    
+          "distance": 35, 
+
+          "figure": 0, 
+
+          "time": 2  
+    },
+{
+    
+          "distance": 35, 
+
+          "figure": 1, 
+
+          "time": 2  
+    },
+{
+    
+          "distance": 35, 
+
+          "figure": 0, 
+
+          "time": 2 
+    },
+{
+    
+          "distance": 35, 
+
+          "figure": 1, 
+
+          "time": 2  
+    },
+{
+    
+          "distance": 35, 
+
+          "figure": 0, 
+
+          "time": 2  
+    },
+{
+    
+          "distance": 35, 
+
+          "figure": 1, 
+          "time": 2  
+    },
+{
+    
+          "distance": 35, 
+
+          "figure": 0, 
+
+          "time": 2  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1600, 
+       
+	  "y": -600         
+    },"pos": {
+         
+          "x": 800, 
+   
+          "y": 150
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 322,
+ 
+          "figure": 3
+  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 3, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 60, 
+
+          "figure": 3, 
+
+          "time": 5  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1600, 
+       
+	  "y": -600         
+    },"pos": {
+         
+          "x": 600, 
+   
+          "y": 230
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 337,
+ 
+          "figure": 2
+  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 2, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 60, 
+
+          "figure": 2, 
+
+          "time": 5  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1600, 
+       
+	  "y": -600         
+    },"pos": {
+         
+          "x": 400, 
+   
+          "y": 310
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 352,
+ 
+          "figure": 1  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 1, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 60, 
+
+          "figure": 1, 
+
+          "time": 5  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1600, 
+       
+	  "y": -600         
+    },"pos": {
+         
+          "x": 200, 
+   
+          "y": 390
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 367,
+ 
+          "figure": 0  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 0, 
+  
+          "time": 9 
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -600, 
+       
+	  "y": -600         
+    },"pos": {
+         
+          "x": 200, 
+   
+          "y": 150
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 382,
+ 
+          "figure": 2
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 2, 
+  
+          "time": 5 
+    },
+{
+         
+          "distance": 60, 
+      
+          "figure": 2, 
+  
+          "time": 5 
+    } 
+   
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -600, 
+       
+	  "y": -600         
+    },"pos": {
+         
+          "x": 500, 
+   
+          "y": 225
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 7,
+ 
+          "time": 398,
+ 
+          "figure": 1  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 1, 
+  
+          "time": 5 
+    } 
+   
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1200, 
+       
+	  "y": 500         
+    },"pos": {
+         
+          "x": 600, 
+   
+          "y": 350    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 7,
+ 
+          "time": 410,
+ 
+          "figure": 3  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 3, 
+  
+          "time": 9 
+    } 
+   
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1600, 
+       
+	  "y": 1150         
+    },"pos": {
+         
+          "x": 800, 
+   
+          "y": 450
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 440,
+ 
+          "figure": 1
+  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 1, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 60, 
+
+          "figure": 1, 
+
+          "time": 5  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1600, 
+       
+	  "y": 1150         
+    },"pos": {
+         
+          "x": 600, 
+   
+          "y": 450    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 455,
+ 
+          "figure": 0
+  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 0, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 60, 
+
+          "figure": 0, 
+
+          "time": 5  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1600, 
+       
+	  "y": 1150         
+    },"pos": {
+         
+          "x": 400, 
+   
+          "y": 450
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 470,
+ 
+          "figure": 3 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 3, 
+  
+          "time": 5 
+               }, 
+   
+        {
+    
+          "distance": 60, 
+
+          "figure": 3, 
+
+          "time": 5  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1600, 
+       
+	  "y": 1150         
+    },"pos": {
+         
+          "x": 200, 
+   
+          "y": 450
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 485,
+ 
+          "figure": 2  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 1, 
+  
+          "time": 9 
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -100, 
+       
+	  "y": 300         
+    },"pos": {
+         
+          "x": 200, 
+   
+          "y": 350
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 510,
+ 
+          "figure": 3 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 3, 
+  
+          "time": 8 
+               }, 
+   
+        {
+    
+          "distance": 60, 
+
+          "figure": 3, 
+
+          "time": 4  
+    },
+{
+    
+          "distance": 60, 
+
+          "figure": 3, 
+
+          "time": 4  
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 00, 
+       
+	  "y": 300         
+    },"pos": {
+         
+          "x": 500, 
+   
+          "y": 350
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": -0.7,
+ 
+          "time": 530,
+ 
+          "figure": 1  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 0, 
+  
+          "time": 9 
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 00, 
+       
+	  "y": 300         
+    },"pos": {
+         
+          "x": 300, 
+   
+          "y": 300
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.7,
+ 
+          "time": 569,
+ 
+          "figure": 1  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 2, 
+  
+          "time": 4,
+          "duration": 9 
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 150, 
+       
+	  "y": 300         
+    },"pos": {
+         
+          "x": 450, 
+   
+          "y": 300
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.7,
+ 
+          "time": 599,
+ 
+          "figure": 2 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 3, 
+  
+          "time":4,
+          "duration": 9 
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 200, 
+       
+	  "y": 300         
+    },"pos": {
+         
+          "x": 600, 
+   
+          "y": 300
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 627,
+ 
+          "figure": 3,
+          "duration": 9  
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 2, 
+  
+          "time":14, 
+    },
+{
+         
+          "distance": 60, 
+      
+          "figure": 2, 
+  
+          "time":7
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 100, 
+       
+	  "y": 400         
+    },"pos": {
+         
+          "x": 500, 
+   
+          "y": 400
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 652,
+ 
+          "figure": 0,
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 0, 
+  
+          "time": 9, 
+    },
+{
+         
+          "distance": 60, 
+      
+          "figure": 0, 
+  
+          "time": 9, 
+    }
+   ]    
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -150, 
+       
+	  "y": 200         
+    },"pos": {
+         
+          "x": 150, 
+   
+          "y": 200
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.7,
+ 
+          "time": 686,
+ 
+          "figure": 0 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 1, 
+  
+          "time": 4,
+          "duration": 9 
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 0, 
+       
+	  "y": 200         
+    },"pos": {
+         
+          "x": 300, 
+   
+          "y": 200
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.7,
+ 
+          "time": 716,
+ 
+          "figure": 0 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 2, 
+  
+          "time":4,
+          "duration": 9
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 150, 
+       
+	  "y": 200         
+    },"pos": {
+         
+          "x": 450, 
+   
+          "y": 200
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.7,
+ 
+          "time": 745,
+ 
+          "figure": 1 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 1, 
+  
+          "time":9
+    },
+{
+         
+          "distance": 60, 
+      
+          "figure": 1, 
+  
+          "time":9
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 200, 
+       
+	  "y": 200         
+    },"pos": {
+         
+          "x": 600, 
+   
+          "y": 200
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 768,
+ 
+          "figure": 3 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 3, 
+  
+          "time":6,
+    }  
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -100, 
+       
+	  "y": 200         
+    },"pos": {
+         
+          "x": 200, 
+   
+          "y": 200
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 788,
+ 
+          "figure": 3 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 3, 
+  
+          "time":8,
+    },
+{
+         
+          "distance": 80, 
+      
+          "figure": 3, 
+  
+          "time":7,
+    }  
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -100, 
+       
+	  "y": 350         
+    },"pos": {
+         
+          "x": 200, 
+   
+          "y": 350
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 788,
+ 
+          "figure": 2 
+    },
+    "Notes": [
+
+{
+         
+          "distance": 80, 
+      
+          "figure": 2, 
+  
+          "time":8,
+    },
+{
+         
+          "distance": 80, 
+      
+          "figure": 1, 
+  
+          "time":8,
+    } 
+    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -100, 
+       
+	  "y": 200         
+    },"pos": {
+         
+          "x": 450, 
+   
+          "y": 200
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 812,
+ 
+          "figure": 0
+    },
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure": 0, 
+  
+          "time":4,
+    },
+{
+         
+          "distance": 50, 
+      
+          "figure": 0, 
+  
+          "time":4,
+    } 
+    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 150, 
+       
+	  "y": 350         
+    },"pos": {
+         
+          "x": 600, 
+   
+          "y": 200
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 828,
+ 
+          "figure": 2
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 2, 
+  
+          "time":7,
+    },
+{
+         
+          "distance": 100, 
+      
+          "figure": 2, 
+  
+          "time":7,
+    },
+{
+         
+          "distance": 100, 
+      
+          "figure": 2, 
+  
+          "time":7,
+    } 
+   
+    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 100, 
+       
+	  "y": 100         
+    },"pos": {
+         
+          "x": 650, 
+   
+          "y": 250
+    
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 832,
+ 
+          "figure": 2
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 2, 
+  
+          "time":7,
+    },
+{
+         
+          "distance": 100, 
+      
+          "figure": 2, 
+  
+          "time":7,
+    } 
+   
+    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 950, 
+       
+	  "y": -750         
+    },"pos": {
+         
+          "x": 650, 
+   
+          "y": 350
+    
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 1.57,
+ 
+          "time": 855,
+ 
+          "figure": 3
+    },
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure":3, 
+  
+          "time":3,
+    },
+{
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time":3,
+    } 
+   
+    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 880, 
+       
+	  "y": 1250         
+    },"pos": {
+         
+          "x": 580, 
+   
+          "y": 250   
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 1.57,
+ 
+          "time": 870,
+ 
+          "figure": 0
+    },
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure": 0, 
+  
+          "time":3,
+    },
+{
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time":3,
+    } 
+   
+    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1080, 
+       
+	  "y": 650         
+    },"pos": {
+         
+          "x": 580, 
+   
+          "y": 480
+       }, 
+            
+          "direction": -1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 885,
+ 
+          "figure": 3
+    },
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure":3, 
+  
+          "time":3,
+    },
+{
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time":3,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 2, 
+  
+          "time":7,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 1, 
+  
+          "time":7,
+    } 
+   
+    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -50, 
+       
+	  "y": 600         
+    },"pos": {
+         
+          "x": 400, 
+   
+          "y": 450
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 5.495,
+ 
+          "time": 930,
+ 
+          "figure": 3
+    },
+    "Notes": [
+
+{
+         
+          "distance": 70, 
+      
+          "figure": 2, 
+  
+          "time":3,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 1, 
+  
+          "time":3,
+    }    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -50, 
+       
+	  "y": 400         
+    },"pos": {
+         
+          "x": 400, 
+   
+          "y": 300
+       }, 
+            
+          "direction": 1, 
+     
+          "speed": 20, 
+  
+          "theta": 5.495,
+ 
+          "time": 916,
+ 
+          "figure": 2
+    },
+    "Notes": [
+
+{
+         
+          "distance": 70, 
+      
+          "figure": 1, 
+  
+          "time":3,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 0, 
+  
+          "time":3,
+    }    
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1000, 
+       
+	  "y": 750         
+    },"pos": {
+         
+          "x": 700, 
+   
+          "y": 450
+       }, 
+            
+          "direction":-1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.85,
+ 
+          "time": 946,
+ 
+          "figure": 0
+    },
+    "Notes": [
+
+{
+         
+          "distance": 70, 
+      
+          "figure": 0, 
+  
+          "time":4,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 3, 
+  
+          "time":4,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 2, 
+  
+          "time":4,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 1, 
+  
+          "time":4,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 1, 
+  
+          "time":4,
+    }   
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1050, 
+       
+	  "y": 00         
+    },"pos": {
+         
+          "x": 400, 
+   
+          "y": 150
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 980,
+ 
+          "figure": 1
+    },
+    "Notes": [
+
+{
+         
+          "distance": 70, 
+      
+          "figure": 1, 
+  
+          "time":8,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 1, 
+  
+          "time":8,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 1, 
+  
+          "time":7,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 3, 
+  
+          "time":7,
+          "duration": 9
+    }  
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -200, 
+       
+	  "y": 250         
+    },"pos": {
+        
+          "x": 100, 
+   
+          "y": 250
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 1028,
+ 
+          "figure": 0
+    },
+    "Notes": [
+
+{
+         
+          "distance": 70, 
+      
+          "figure": 0, 
+  
+          "time":6,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 0, 
+  
+          "time":6,
+    },
+{
+         
+          "distance": 70, 
+      
+          "figure": 0, 
+  
+          "time":6,
+    },
+{
+         
+          "distance": 50, 
+      
+          "figure": 0, 
+  
+          "time":4,
+    },
+{
+         
+          "distance": 50, 
+      
+          "figure": 0, 
+  
+          "time":4,
+    } 
+     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 310, 
+       
+	  "y": -100         
+    },"pos": {
+         
+          "x": 460, 
+   
+          "y": 250
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.785,
+ 
+          "time": 1060,
+ 
+          "figure": 3
+    },
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure": 3, 
+  
+          "time":4,
+    }     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1000, 
+       
+	  "y": 100         
+    },"pos": {
+         
+          "x": 495, 
+   
+          "y": 335
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 2.355,
+ 
+          "time": 1068,
+ 
+          "figure": 1
+    },
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure": 1, 
+  
+          "time":4,
+    }     
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1000, 
+       
+	  "y": 370         
+    },"pos": {
+         
+          "x": 410, 
+   
+          "y": 370
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 3.14,
+ 
+          "time": 1076,
+ 
+          "figure": 2
+    },
+    "Notes": [
+
+{
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time":4,
+    },
+{
+         
+          "distance": 50, 
+      
+          "figure": 2, 
+  
+          "time":4,
+    } 
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 1000, 
+       
+	  "y": 370         
+    },"pos": {
+         
+          "x": 400, 
+   
+          "y": 200
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 1100,
+ 
+          "figure": 0
+    },
+    "Notes": [
+
+{
+         
+          "distance": 60, 
+      
+          "figure": 0, 
+  
+          "time":7,
+    },
+{
+         
+          "distance": 60, 
+      
+          "figure": 0, 
+  
+          "time":7,
+    },
+{
+         
+          "distance": 60, 
+      
+          "figure": 0, 
+  
+          "time":7,
+    } 
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 440, 
+       
+	  "y": -00         
+    },"pos": {
+         
+          "x": 640, 
+   
+          "y": 200
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.785,
+ 
+          "time": 1128,
+ 
+          "figure": 2
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 2, 
+  
+          "time":7,
+    },
+{
+         
+          "distance": 100, 
+      
+          "figure": 2, 
+  
+          "time":7,
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 440, 
+       
+	  "y": -40         
+    },"pos": {
+         
+          "x": 640, 
+   
+          "y": 250
+       }, 
+            
+          "direction":-1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.785,
+ 
+          "time": 1131,
+ 
+          "figure": 3
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 3, 
+  
+          "time": 7,
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": -100, 
+       
+	  "y": 300         
+    },"pos": {
+         
+          "x": 200, 
+   
+          "y": 300
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 0,
+ 
+          "time": 1160,
+ 
+          "figure": 3
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 3, 
+  
+          "time": 7,
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 500, 
+       
+	  "y": -500         
+    },"pos": {
+         
+          "x": 500, 
+   
+          "y": 170
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 1.57,
+ 
+          "time": 1180,
+ 
+          "figure": 0
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 0, 
+  
+          "time": 7,
+    },
+{
+         
+          "distance": 100, 
+      
+          "figure": 0, 
+  
+          "time": 7,
+    },
+{
+         
+          "distance": 100, 
+      
+          "figure": 0, 
+  
+          "time": 7,
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 500, 
+       
+	  "y": -450         
+    },"pos": {
+         
+          "x": 500, 
+   
+          "y": 220
+       }, 
+            
+          "direction":-1, 
+     
+          "speed": 20, 
+  
+          "theta": 1.57,
+ 
+          "time": 1183,
+ 
+          "figure": 1
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 1, 
+  
+          "time": 7,
+    },
+{
+         
+          "distance": 100, 
+      
+          "figure": 1, 
+  
+          "time": 7,
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 100, 
+       
+	  "y": 100         
+    },"pos": {
+         
+          "x": 400, 
+   
+          "y": 350
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 0.8,
+ 
+          "time": 1250,
+ 
+          "figure": 0,
+          "duration": 20
+    },
+    "Notes": [
+
+{
+         
+          "distance": 100, 
+      
+          "figure": 0, 
+  
+          "time": 27,
+          "duration": 13
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 400, 
+       
+	  "y": -475         
+    },"pos": {
+         
+          "x": 300, 
+   
+          "y": 175
+       }, 
+            
+          "direction":-1, 
+     
+          "speed": 20, 
+  
+          "theta": 1.57,
+ 
+          "time": 1298,
+ 
+          "figure": 2
+    },
+    "Notes": [
+
+{
+         
+          "distance": 125, 
+      
+          "figure": 3, 
+  
+          "time": 4,
+    },
+{
+         
+          "distance": 125, 
+      
+          "figure": 3, 
+  
+          "time": 4
+    }
+   ]
+  },
+{
+ "Route":{
+	"center": {
+
+    	  "x": 600, 
+       
+	  "y": -475         
+    },"pos": {
+         
+          "x": 700, 
+   
+          "y": 175
+       }, 
+            
+          "direction":1, 
+     
+          "speed": 20, 
+  
+          "theta": 1.57,
+ 
+          "time": 1298,
+ 
+          "figure": 1
+    },
+    "Notes": [
+
+{
+         
+          "distance": 125, 
+      
+          "figure": 0, 
+  
+          "time": 4,
+    },
+{
+         
+          "distance": 125, 
+      
+          "figure": 0, 
+  
+          "time": 4
+    }
+   ]
+  }
+ ]
+}
