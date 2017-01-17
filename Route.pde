@@ -1,4 +1,10 @@
-// fms_eraser
+// Route.pde
+// ノーツの動く軌道に関するクラス
+// 1-4-54 Shunsuke Mano
+
+/*
+ノーツの動く軌道は指定された円上を動くように定義されています。
+ */
 
 class Route {
 
@@ -18,26 +24,6 @@ class Route {
   int   direction;
   float radSpeed;
   float radius;
-
-  Route(PVector _center, PVector _pos, float _speed, int _timing, int _direction) {
-    center        = _center;
-    pos           = _pos;
-    speed         = _speed;
-    timing        = _timing;
-    direction     = _direction;
-    radius        = PVector.dist(this.center, this.pos);
-    radSpeed      = speed / radius;
-  }
-
-  Route(Route _route, Det _det, float theta) {
-    center        = _route.center;
-    direction     = _route.direction;
-    speed         = _route.speed;
-    timing        = _route.timing + _det.time;
-    pos           = PVector.add(_route.pos, new PVector(_det.distance*cos(theta), _det.distance*sin(theta)));
-    radius        = PVector.dist(this.center, this.pos);
-    radSpeed      = speed / radius;
-  }
 
   Route(JSONObject _json) {
     center        = new PVector(_json.getJSONObject("center").getInt("x"), _json.getJSONObject("center").getInt("y"));

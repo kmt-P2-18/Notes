@@ -1,24 +1,24 @@
-// fms_eraser
+// Det.pde
+// ノーツの定義に使用するDetという差分に関するクラス
+// 1-4-54 Shunsuke Mano
+
+/*
+定義したグループ内では、ノーツを１つ前のノーツとの差分で定義しています。(グループ内最初のノーツを除く)
+ */
 
 class Det {
+
+  /*
+   distance : １つ前のノーツとの距離を定義します。(円の中心側が負)
+   time     : １つ前のノーツとの時間の差を定義します。(負の値も指定できる)
+   figure   : ノーツの形を指定します。(0:◯, 1:X, 2:△, 3:□)
+   duration : 長押しノーツの継続時間を指定します。(長押しでなければ0)
+   */
+
   float distance;
   int time;
   int figure;
   int duration;
-
-  Det(float _distance, int _time, int _figure) {
-    distance = _distance;
-    time     = _time;
-    figure   = _figure;
-    duration = 0;
-  }
-
-  Det(float _distance, int _time, int _figure, int _duration) {
-    distance = _distance;
-    time     = _time;
-    figure   = _figure;
-    duration = _duration;
-  }
 
   Det(JSONObject _json) {
     distance = _json.getInt("distance");

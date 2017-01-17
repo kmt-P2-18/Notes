@@ -1,4 +1,16 @@
-// fms_eraser
+//Result.pde
+/*
+ プレイ後リザルト画面を表示するクラス
+ 表示する内容はスコア、最大コンボ数、各判定（cool、good、bad）の数、過去の最大スコア、コンボとの差
+ ボタンを押すかキーを押すことで曲名、スコア、コンボ数をツイートすることができる
+ */
+//3-4 Ikeda Tomoki
+
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URLEncoder;
 
 class Result {
   int combo, cool, good, bad, current, time, iStartMillisecond;
@@ -15,9 +27,11 @@ class Result {
     good=Count[1];
     bad=Count[0];
     score=str((combo*1000)+(cool*4000)+(good*2800));
+    //"score.txt"から過去のスコア、コンボ数を取得する
     String [] data=loadStrings(Dir + "/score.txt");
     pscore=int(data[0]);
     pcombo=int(data[1]);
+    //スコア、コンボ数が更新されたら"score.txt"に書き込む
     if (int(score)>pscore) {
       data[0]=score;
     }
@@ -33,17 +47,17 @@ class Result {
     background(0);
     textAlign(LEFT);
     if (time<0) return;
-    
-    if(time == 0){
+
+    if (time == 0) {
       result_start.rewind();
       result_start.play();
     }
-    
-    if(time == 10){
+
+    if (time == 10) {
       result_score.rewind();
       result_score.play();
     }
-    
+
     if (time>=10) {
       fill(255);
       textSize(40);
@@ -72,7 +86,7 @@ class Result {
         if (int(score)>pscore) {
           textSize(35);
           fill(255, 255, 0);
-          text("▲",505,320);
+          text("▲", 505, 320);
           text(str(int(score)-pscore), 540, 320);
         }
       }
@@ -90,7 +104,6 @@ class Result {
       rect(635, 85, 25, 25);
       textSize(30);
       text(title, 672, 110);
-
 
       if (time>=53) {
         textSize(35);
@@ -132,18 +145,33 @@ class Result {
       }
     }
   }
-
-  void buttonPressed() {
-    try{
-    if (_buttonPressed_[0] != 0) tweet();
-    else if(button.hex != 0) this.finished = true;
+  //〇ボタンを押すとツイートする
+  void buttonPressed(int time) {
+      if (buttonPressed[0] != 0){
+        tweetScore();
+        button.hex = 0;
     }
-    catch(Exception e){
+      else if (button.hex > 0){
+        if(time < 90) {
+          iStartMillisecond -= 90;
+          button.hex = 0;
+          return;
+        }
+        this.finished = true;
+      }
+  }
+  //ツイートする関数
+  void tweetScore() {
+    try {
+      _encodedText_ = URLEncoder.encode(title+"\n"+"Score: "+score+"\n"+"Combo: "+combo+"\n#P演習 #project_MIKO", "UTF-8");
+      URI uri = new URI("https://twitter.com/intent/tweet?text=" + _encodedText_);
+      desktop.browse(uri);
+    }
+    catch(URISyntaxException e) {
       e.printStackTrace();
     }
-  }
-
-  void tweet() {
-    openTweetScreen(title+"\n"+"Score: "+score+"\n"+"Combo: "+combo+"\n#P演習 #project_MIKO");
+    catch(IOException e) {
+      e.printStackTrace();
+    }
   }
 }

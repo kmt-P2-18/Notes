@@ -1,4 +1,18 @@
-// fms_eraser
+// Music.pde
+// 楽曲データに関するクラス
+// 1-4-54 Shunsuke Mano
+
+/*
+譜面や、動画、歌詞などのデータを持つクラスです。
+ コンストラクタに楽曲名を渡すと、 data/(楽曲名) 以下に置かれているファイルからインスタンスを作成します。
+ 
+ notes.json...ノーツの位置や動きを定義したJSONファイル
+ jacket.png...曲選択画面や、リザルト時に表示される楽曲のジャケット画像
+ movie.mov....楽曲プレイ中に背景として表示される動画
+ lyrics.txt...楽曲プレイ中に表示される歌詞に関するテキストファイル
+ score.txt....前回までの最高スコアと最大コンボ数を保持するテキストファイル
+ */
+
 
 import processing.video.*;
 import ddf.minim.*;
@@ -9,10 +23,24 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
 class Music {
+
+  /*
+   dir       : 楽曲データが保存されているディレクトリ名
+   name      : 楽曲の名前
+   groups    : 複数のノーツを保持するGroupのインスタンスの配列
+   lyrics    : 表示する歌詞データ
+   movie     : 表示する動画データ
+   combo_num : プレイ中のコンボ数を管理します。
+   max_combo : プレイ中の最大コンボ数を管理します。
+   finished  : 楽曲の再生が終了したかを保持します。
+   notes     : プレイ中の残りのノーツを保持します。順番は時間によって並べ直されます。
+   effects   : プレイ中に発生したエフェクトを保持します。
+   results   : ノーツの判定結果を保持します。(0:BAD, 1:GOOD, 2:COOL)
+   */
+
   String  dir;
   String  name;
   Group[] groups;
-  // Audio   audio;
   Lyrics  lyrics;
   Movie   movie;
   int     combo_num = 0;
@@ -73,17 +101,43 @@ class Music {
   }
 
   void judge(int[] judged, int _currentTime) {
-    try {
-      for (int i = 0; i < 4; i++) {
-        if (judged[i] == 1) {
-          play_tap[i].rewind();
-          play_tap[i].play();
-        }
+    for (int i = 0; i < 4; i++) {
+      if (judged[i] == 1) {
+        play_tap[i].rewind();
+        play_tap[i].play();
       }
-      for (i = 0; i < min(2, this.notes.size()); i++) {
-        if (_currentTime - notes.get(i).route.timing <= -4) return;
-        _timeDet_ = _currentTime - notes.get(i).route.timing - notes.get(i).duration;
-        if (_timeDet_ >= 3) {
+    }
+    for (i = 0; i < min(2, this.notes.size()); i++) {
+      if (_currentTime - notes.get(i).route.timing <= -4) return;
+      _timeDet_ = _currentTime - notes.get(i).route.timing - notes.get(i).duration;
+      if (_timeDet_ >= 3) {
+        this.combo_num = 0;
+        effects.add(new Effect(notes.get(i).route.pos, 0, 0, _currentTime));
+        results.append(0);
+        notes.remove(i);
+        i--;
+        continue;
+      }
+      int figure  = notes.get(i).figure;
+      if (judged[figure] == (notes.get(i).duration == 0 ? 1 : 3)) {
+        if (_timeDet_ <= -4) break;
+        if (abs(_timeDet_) <= 1) {
+          this.combo_num++;
+          this.max_combo = max(this.max_combo, this.combo_num);
+          effects.add(new Effect(notes.get(i).route.pos, 2, combo_num, _currentTime));
+          results.append(2);
+          notes.remove(i);
+          i--;
+          continue;
+        } else if (abs(_timeDet_) <= 2) {
+          this.combo_num++;
+          this.max_combo = max(this.max_combo, this.combo_num);
+          effects.add(new Effect(notes.get(i).route.pos, 1, combo_num, _currentTime));
+          results.append(1);
+          notes.remove(i);
+          i--;
+          continue;
+        } else if (_timeDet_ >= -3) {
           this.combo_num = 0;
           effects.add(new Effect(notes.get(i).route.pos, 0, 0, _currentTime));
           results.append(0);
@@ -91,54 +145,23 @@ class Music {
           i--;
           continue;
         }
-        int figure  = notes.get(i).figure;
-        if (judged[figure] == (notes.get(i).duration == 0 ? 1 : 3)) {
-          if (_timeDet_ <= -4) break;
-          if (abs(_timeDet_) <= 1) {
-            this.combo_num++;
-            this.max_combo = max(this.max_combo, this.combo_num);
-            effects.add(new Effect(notes.get(i).route.pos, 2, combo_num, _currentTime));
-            results.append(2);
-            notes.remove(i);
-            i--;
-            continue;
-          } else if (abs(_timeDet_) <= 2) {
-            this.combo_num++;
-            this.max_combo = max(this.max_combo, this.combo_num);
-            effects.add(new Effect(notes.get(i).route.pos, 1, combo_num, _currentTime));
-            results.append(1);
-            notes.remove(i);
-            i--;
-            continue;
-          } else if (_timeDet_ >= -3) {
-            this.combo_num = 0;
-            effects.add(new Effect(notes.get(i).route.pos, 0, 0, _currentTime));
-            results.append(0);
-            notes.remove(i);
-            i--;
-            continue;
-          }
-        }
-        if (notes.get(i).duration != 0) {
-          _timeDet_ = _currentTime - notes.get(i).route.timing;
-          if (_timeDet_ > -3) return;
-          if (_timeDet_ >= -3 && _timeDet_ <= -2 && judged[figure] != 0) {
-            effects.add(new Effect(notes.get(i).route.pos, 0, 0, _currentTime));
-            results.append(0);
-            notes.remove(i);
-            i--;
-          } else if (_timeDet_ >= 2 && judged[figure] != 2) {
-            effects.add(new Effect(notes.get(i).route.pos, 0, 0, _currentTime));
-            results.append(0);
-            results.append(0);
-            notes.remove(i);
-            i--;
-          }
+      }
+      if (notes.get(i).duration != 0) {
+        _timeDet_ = _currentTime - notes.get(i).route.timing;
+        if (_timeDet_ > -3) return;
+        if (_timeDet_ >= -3 && _timeDet_ <= -2 && judged[figure] != 0) {
+          effects.add(new Effect(notes.get(i).route.pos, 0, 0, _currentTime));
+          results.append(0);
+          notes.remove(i);
+          i--;
+        } else if (_timeDet_ >= 2 && judged[figure] != 2) {
+          effects.add(new Effect(notes.get(i).route.pos, 0, 0, _currentTime));
+          results.append(0);
+          results.append(0);
+          notes.remove(i);
+          i--;
         }
       }
-    }
-    catch(Exception e) {
-      e.printStackTrace();
     }
   }
 }

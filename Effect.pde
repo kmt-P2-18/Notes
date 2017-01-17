@@ -1,6 +1,20 @@
-// fms_eraser
+// Effect.pde
+// エフェクトに関するクラス
+// 1-4-54  Shunsuke Mano
+
+/*
+ノーツが消える時のエフェクトを表示するクラスです。
+ 判定によってエフェクトが変化します。
+ */
 
 class Effect {
+
+  /*
+   center    : エフェクトを表示する位置を指定します。
+   judge     : 表示するエフェクトの種類を指定します。(0:BAD, 1:GOOD, 2:COOL)
+   startTime : エフェクト表示が開始される時間を指定します。
+   decision  : judgeとコンボ数を元に評価を保持します。(BAD, GOOD, COOLのどれかとコンボ数)
+   */
 
   PVector center;
   int     judge;

@@ -14,10 +14,6 @@ class Menu {
   HashMap<String, String> song_name = new HashMap<String, String>();
 
   Menu() {
-    setting();
-  }
-
-  void setting() {
     lines =loadStrings("songs_list.txt");
     for (int i=0; i<lines.length; i++) {
       jacket[i]=loadImage(lines[i]+"/jacket.png");
@@ -31,6 +27,7 @@ class Menu {
   }
 
   void draw() {
+    imageMode(CORNER);
     current = approach(center, current);
     float def = current%350;
     float origin = 600 - current;

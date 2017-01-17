@@ -1,5 +1,6 @@
-// ikeda
-
+//button_arduino
+//各ボタンのhighをlow合計して１０進数にしてprocessingに送る
+//3-4 Tomoki Ikeda
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -39,3 +40,4 @@ void loop() {
   Serial.write(sum);
   delay(10);
 }
+

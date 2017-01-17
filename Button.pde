@@ -1,4 +1,10 @@
-// ikeda
+//Button.pde
+/*
+ arudinoから送られてきた１０進数を２進数にして１桁ずつ分解するクラス
+ _buttonPressed_[0]が〇、[1]が✖、[2]が□、[3]が△
+ ボタンが押されていないときは０、押された瞬間は１、押され続けているときは２、離された瞬間は３を返す
+ */
+//3-4 Tomoki Ikeda
 
 import processing.serial.*;
 

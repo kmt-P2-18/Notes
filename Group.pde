@@ -1,6 +1,18 @@
-// fms_eraser
+// Group.pde
+// 複数のノーツを保持するグループに関するクラス
+// 1-4-54 Shunsuke Mano
+
+/*
+project DIVAという音楽ゲームのプレイ動画から研究した結果、複数のノーツをまとめるという発想に至りました。
+詳しくは 譜面ファイル(JSON)の書き方.pdf を参照してください。
+*/
 
 class Group {
+  
+  /*
+   notes : 複数のノーツを配列として保持します。
+  */
+  
   Note[]  notes;
 
   Group(JSONObject _json) {
