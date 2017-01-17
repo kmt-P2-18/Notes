@@ -17,7 +17,19 @@ class Note {
   int   figure;
   int   duration;
   Route route;
-  
+
+  Note(int _figure, Route _route) {
+    figure   = _figure;
+    route    = _route;
+    duration = 0;
+  }
+
+  Note(int _figure, Route _route, int _duration) {
+    figure   = _figure;
+    route    = _route;
+    duration = _duration;
+  }
+
   Note(JSONObject _json) { // "Route"オブジェクトを引数に渡す
     figure   = _json.getInt("figure");
     route    = new Route(_json);

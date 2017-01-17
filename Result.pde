@@ -68,7 +68,7 @@ class Result {
           if ((time-30)*25<255)
             fill((time-30)*10);
           else fill(255);
-          if (score=="1000000") {
+          if (int(score)>=1000000) {
             if (250+i*20-(time-30)*20>=250) {
               text(score.charAt(i), 650-(score.length()-i)*80, 250+i*20-(time-30)*20);
             } else {
