@@ -6,9 +6,13 @@
  settings(),setup(), draw(), serialEvent(Serial),  movieEvent(Movie), keyPressed()等の関数が定義されています。
  */
 
-void settings() {
+void setup() {
   size(1000, 600);
-
+  frameRate(-1);
+  
+  // フォントの読み込み
+  textFont(createFont("MS Gothic", 20, true));
+  
   // 画像の読み込み
   appear = loadImage("material/appear.png");
   bable  = loadImage("material/bable.png");
@@ -39,11 +43,6 @@ void settings() {
     String[] dictionary = line.split(",");
     music_title.put(dictionary[0], dictionary[1]);
   }
-}
-
-void setup() {
-  frameRate(-1);
-  textFont(createFont("MS Gothic", 20, true));
 
   // arduinoとの接続
   for (i = 0; i < 10; i++) {
