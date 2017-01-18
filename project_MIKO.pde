@@ -1,9 +1,11 @@
 // project_MIKO.pde
-// メインプログラム
+// setup(), draw(), serialEvent(Serial),  movieEvent(Movie), keyPressed()等の関数の定義
 // 1-4-54 Shunsuke Mano
 
 /*
- settings(),setup(), draw(), serialEvent(Serial),  movieEvent(Movie), keyPressed()等の関数が定義されています。
+ 注意：現時点では、mac book pro, Processing 3.2.3以外での動作確認が取れていません。
+ 　　　起動する際はmac OSのProcessing 3.2.3で起動して下さい。
+ 　　　それでも起動ができない際は、18班のメンバーに連絡をいただけると幸いです。
  */
 
 void setup() {
