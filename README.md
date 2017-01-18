@@ -41,7 +41,7 @@
 
 プレイ画面の構成は以下のようになっている。
 
-<img src=" README_IMG/const02.png">
+<img src="README_IMG/const02.png">
 
 1. 選択された楽曲名が表示される。
 
@@ -63,7 +63,7 @@
 3. プレイした楽曲のジャケット画像が表示される。
 
 4. Arduinoの赤ボタン、またはENTER keyを押すことでスコアとコンボ数をTwitterで共有することができる。
-<img src="README_IMG/const04.png">
+<img src="README_IMG/const04.PNG">
 
 ## 操作説明
 
