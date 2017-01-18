@@ -155,11 +155,11 @@
 ```json
 "Route": {
 	"center": {
-        "x": -100, 
+        "✖": -100, 
         "y": -100
     }, 
     "pos": {
-        "x": 50, 
+        "✖": 50, 
         "y": 250
     }, 
         "direction": 1, 
@@ -172,10 +172,10 @@
 
 - `center`
 	- ノーツが動く軌道の円の中心座標オブジェクト
-	- `x` と `y` の療法を指定する(直交座標系)
+	- `✖` と `y` の療法を指定する(直交座標系)
 - `pos`
 	- 最初のノーツの位置座標オブジェクト
-	- `x` と `y` の療法を指定する(直交座標系)
+	- `✖` と `y` の療法を指定する(直交座標系)
 - `speed`
 	- ノーツの動く速さ(グループ内で一定)
 - `theta`
@@ -188,7 +188,7 @@
 	- 最初のノーツが押される理想のタイミング
 	- 曲が始まってからの時間を指定(1あたり0.05秒)
 - `figure`
-	- 最初のノーツの形(0:◯, 1:X, 2:△, 3:◻)
+	- 最初のノーツの形(0:●, 1:✖, 2:■, 3:▲)
 - `duration`
 	- 最初のノーツの長押しのノーツのときのみ記載
 	- 押してる時間を指定
@@ -223,7 +223,7 @@
 - `time`
 	- 時間の変位を指定する
 - `figure`
-	- ノーツの形(0:◯, 1:X, 2:△, 3:◻)
+	- ノーツの形(0:●, 1:✖, 2:■, 3:▲)
 - `duration`
 	- ノーツの長押しのノーツのときのみ記載
 	- 押してる時間を指定
@@ -237,11 +237,11 @@
         {
             "Route": {
                 "center": {
-                    "x": -100, 
+                    "✖": -100, 
                     "y": -100
                 }, 
                 "pos": {
-                    "x": 50, 
+                    "✖": 50, 
                     "y": 250
                 }, 
                 "direction": 1, 
@@ -285,14 +285,14 @@ project_MIKO/
 |--data/  
 |  |--meiji/
 |  |  |--jacket.png
-|  |  |--lyrics.txt
+|  |  |--lyrics.t✖t
 |  |  |--movie.mov
 |  |  |--notes.json
-|  |  |--score.txt
+|  |  |--score.t✖t
 |  |
-|  |--songs_list.txt
+|  |--songs_list.t✖t
 |  |
-|  |--music_title.txt               
+|  |--music_title.t✖t               
 |  |
 :  :
 ```
@@ -301,7 +301,7 @@ project_MIKO/
 
 - `jacket.png`
 	- 曲選択画面や、リザルト時に表示される楽曲のジャケット画像
-- `lyrics.txt`
+- `lyrics.t✖t`
 	- 楽曲プレイ中に表示される歌詞に関するテキストファイル
 	1. 奇数行に歌詞データを１フレーズ毎に書く
 	2. 偶数行に一つ上のフレーズが何秒から表示するかを指定する(小数での指定が可能)
@@ -312,18 +312,18 @@ project_MIKO/
 - `notes.json`
 	- ノーツの位置や動きを定義したJSONファイル
 	- 書き方については `譜面ファイル(JSON)の書き方.pdf` を参照
-- `score.txt`
+- `score.t✖t`
 	- 前回までの最高スコアと最大コンボ数を保持するテキストファイル
 	- １行目は過去の最大スコア
 	- ２行目は過去の最大コンボ数
 
 ### その他の変更
 
-- `music_title.txt`
+- `music_title.t✖t`
 	- ディレクトリ名と楽曲名を表記する
-	- ex) `meiji` ディレクトリの `明治大学校歌` という楽曲名の場合
+	- e✖) `meiji` ディレクトリの `明治大学校歌` という楽曲名の場合
 		- `meiji,明治大学校歌`
-- `songs_list.txt`
+- `songs_list.t✖t`
 	- 読み込む楽曲のディレクトリ名を羅列する
 	- ロックされている楽曲を表示したい場合は `noimage` と表記
 
@@ -333,22 +333,6 @@ project_MIKO/
 
 ```
 project_MIKO/
-|
-|--README/
-|  |--img/
-|  |  |--button_circuit.png
-|  |  |--button_image.jpg
-|  |  |--diva.jpg
-|  |  |--start01.gif
-|  |  |--start02.png
-|  |  |--start03.png
-|  |
-|  |--譜面ファイル(JSON)の書き方.md
-|  |--曲選択画面の操作方法.md
-|  |--新規楽曲データの追加方法.md
-|  |--arduinoの組み方.md
-|  |--目次.md
-|
 |--data/                              // ゲーム内で使用する素材や楽曲データ等
 |  |--material/                       // 画像素材
 |  |  |--appear.png
@@ -383,22 +367,22 @@ project_MIKO/
 |  |
 |  |--rinhana/                        // "凛として咲く花の如く"の楽曲データ
 |  |  |--jacket.png
-|  |  |--lyrics.txt
+|  |  |--lyrics.t✖t
 |  |  |--movie.mov
 |  |  |--notes.json
-|  |  |--score.txt
+|  |  |--score.t✖t
 |  |
 |  |--noimage/                        // LOCKEDされた楽曲に関するデータファイル
 |  |  |--jacket.png
-|  |  |--score.txt
+|  |  |--score.t✖t
 |  |
-|  |--songs_list.txt                  // 読み込む楽曲のディレクトリ名を指定する
-|  |--music_title.txt                 // ディレクトリ名と楽曲名の組み合わせを表記する
+|  |--songs_list.t✖t                  // 読み込む楽曲のディレクトリ名を指定する
+|  |--music_title.t✖t                 // ディレクトリ名と楽曲名の組み合わせを表記する
 |
 |--button_arduino/                    // arduinoのコード
 |  |--button_arduino.ino
 |
-|--project_MIKO.pde                   // 以下、processingのコード
+|--project_MIKO.pde                   // processingのコード
 |--Button.pde
 |--Det.pde
 |--Effect.pde
@@ -410,6 +394,21 @@ project_MIKO/
 |--Result.pde
 |--Route.pde
 |--valiable.pde
+|
+|--README_IMG/                        // README.mdに使用されている画像
+|  |--button_circuit.png
+|  |--button_image.jpg
+|  |--const01.png
+|  |--const02.png
+|  |--const03.png
+|  |--const04.PNG
+|  |--diva01.png
+|  |--diva02.png
+|  |--diva03.png
+|  |--start01.gif
+|  |--start02.png
+|
+|--README.md                          // 仕様書
 ```
 
 <a id="作業分担"></a>
@@ -453,7 +452,7 @@ project_MIKO/
 <a href="#サイト"></a>
 ## 参考サイト
 * [Comparator(Java Platform SE 6)](https://docs.oracle.com/javase/jp/6/api/java/util/Comparator.html)
-* [動画素材.com](http://xn--hhro09bn9j8uh.com/)
+* [動画素材.com](http://✖n--hhro09bn9j8uh.com/)
 * [ニコニ・コモンズ](http://commons.nicovideo.jp/)
 * [project DIVA プレイ動画 - YouTube](https://www.youtube.com/results?search_query=project+DIVA+%E3%83%97%E3%83%AC%E3%82%A4%E5%8B%95%E7%94%BB)
 
