@@ -21,10 +21,10 @@ void setup() {
   tweet  = loadImage("material/tweet.png");
   start  = loadImage("material/start.png");
   for (i = 0; i < 4; i++) {
-    male       [i] = loadImage("note/" +   "male"      + i + ".png");
-    female     [i] = loadImage("note/" + "female"      + i + ".png");
-    male_long  [i] = loadImage("note/" +   "male_long" + i + ".png");
-    female_long[i] = loadImage("note/" + "female_long" + i + ".png");
+    male       [i] = loadImage("material/" +   "male"      + i + ".png");
+    female     [i] = loadImage("material/" + "female"      + i + ".png");
+    male_long  [i] = loadImage("material/" +   "male_long" + i + ".png");
+    female_long[i] = loadImage("material/" + "female_long" + i + ".png");
   }
 
   // 効果音の読み込み
